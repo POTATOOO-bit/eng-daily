@@ -56,6 +56,8 @@ h2 em{font-style:normal;text-transform:none;letter-spacing:0;font-weight:500}
 .en{font-size:18px;font-weight:600;line-height:1.35;text-wrap:balance;overflow-wrap:anywhere}
 .th{font-size:15px;overflow-wrap:anywhere}
 .rd{font-size:13px;color:var(--mut);overflow-wrap:anywhere}
+.note{margin-top:7px;font-size:13px;line-height:1.45;background:var(--say-soft);color:var(--ink);border-radius:9px;padding:6px 10px;overflow-wrap:anywhere}
+.fc .note{text-align:left;max-width:100%}
 .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:1px 8px;border-radius:9px;background:var(--hear-soft);color:var(--hear);margin-bottom:3px}
 .card .t{min-width:0}
 .acts{display:flex;gap:0;justify-content:flex-end;margin-top:2px}
@@ -146,10 +148,10 @@ function parseInto(text,store){
     }
     if(!cur||p.length<3)continue;
     const kind=p[0].trim()==="h"?"h":"s";
-    const en=p[1].trim(),th=p[2].trim(),rd=(p[3]||"").trim();
+    const en=p[1].trim(),th=p[2].trim(),rd=(p[3]||"").trim(),note=p.slice(4).join("|").trim();
     if(!en||store.seen.has(cur+"|"+kind+"|"+en))continue;
     store.seen.add(cur+"|"+kind+"|"+en);
-    store.phrases.push({cat:cur,kind,en,th,rd});
+    store.phrases.push({cat:cur,kind,en,th,rd,note});
   }
 }
 //</parse>
@@ -185,7 +187,7 @@ function filtered(){
     if(st.cat==="fav"){if(!fav.has(key(p)))return false;}
     else if(st.cat!=="all"&&p.cat!==st.cat)return false;
     if(st.kind!=="all"&&p.kind!==st.kind)return false;
-    if(q&&!(p.en.toLowerCase().includes(q)||p.th.toLowerCase().includes(q)||p.rd.toLowerCase().includes(q)))return false;
+    if(q&&!(p.en.toLowerCase().includes(q)||p.th.toLowerCase().includes(q)||p.rd.toLowerCase().includes(q)||p.note.toLowerCase().includes(q)))return false;
     return true;
   });
 }
@@ -203,7 +205,7 @@ function refreshChipState(){
 
 function cardHtml(p){
   const on=fav.has(key(p));
-  return `<div class="card"><div class="t">${p.kind==="h"?'<span class="tag">ได้ยินบ่อย</span><br>':""}<div class="en" lang="en">${esc(p.en)}</div><div class="th">${esc(p.th)}</div>${p.rd?`<div class="rd">อ่านว่า ${esc(p.rd)}</div>`:""}</div>
+  return `<div class="card"><div class="t">${p.kind==="h"?'<span class="tag">ได้ยินบ่อย</span><br>':""}<div class="en" lang="en">${esc(p.en)}</div><div class="th">${esc(p.th)}</div>${p.rd?`<div class="rd">อ่านว่า ${esc(p.rd)}</div>`:""}${p.note?`<div class="note">${esc(p.note)}</div>`:""}</div>
   <div class="acts">
     <button class="ib" type="button" data-act="speak" data-i="${p.i}" aria-label="ฟังเสียง">${ICON.speak}</button>
     <button class="ib${on?" on":""}" type="button" data-act="fav" data-i="${p.i}" aria-label="บันทึก" aria-pressed="${on}">${ICON.star}</button>
@@ -259,7 +261,7 @@ function drawCard(){
   const p=deck[di];
   $("prPos").textContent=(di+1)+" / "+deck.length;
   $("fc").innerHTML=revealed
-    ?`<div class="en2" lang="en">${esc(p.en)}</div><div class="th">${esc(p.th)}</div>${p.rd?`<div class="rd">อ่านว่า ${esc(p.rd)}</div>`:""}<div class="hint">แตะเพื่อซ่อนคำตอบ</div>`
+    ?`<div class="en2" lang="en">${esc(p.en)}</div><div class="th">${esc(p.th)}</div>${p.rd?`<div class="rd">อ่านว่า ${esc(p.rd)}</div>`:""}${p.note?`<div class="note">${esc(p.note)}</div>`:""}<div class="hint">แตะเพื่อซ่อนคำตอบ</div>`
     :`<div class="th" style="font-size:clamp(20px,4.6vw,30px);font-weight:600">${esc(p.th)}</div><div class="hint">${p.kind==="h"?"ประโยคที่จะได้ยิน":"ประโยคที่เราพูด"} · ลองนึกเป็นภาษาอังกฤษ แล้วแตะเพื่อดูคำตอบ</div>`;
 }
 function step(d){di=(di+d+deck.length)%deck.length;revealed=false;drawCard();}
