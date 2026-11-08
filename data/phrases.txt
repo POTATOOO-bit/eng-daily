@@ -1,0 +1,265 @@
+# Say It Abroad — ไฟล์ประโยคหลัก
+# หมวดใหม่: @cat|รหัส|ชื่อไทย
+# ประโยค:  ชนิด|English|คำแปลไทย|คำอ่านไทย   (ชนิด s = ประโยคที่เราพูด, h = ประโยคที่จะได้ยินจากอีกฝ่าย)
+# บรรทัดที่ขึ้นต้นด้วย # คือคอมเมนต์
+
+@cat|greet|ทักทายและพื้นฐาน
+s|Hello! / Hi!|สวัสดี|เฮลโล / ไฮ
+s|Good morning.|สวัสดีตอนเช้า|กู๊ด มอร์นิ่ง
+s|Good evening.|สวัสดีตอนเย็น|กู๊ด อีฟนิ่ง
+s|How are you?|สบายดีไหม|ฮาว อาร์ ยู
+s|I'm fine, thank you. And you?|สบายดี ขอบคุณ แล้วคุณล่ะ|แอม ไฟน์ แธงก์ ยู แอนด์ ยู
+s|Thank you very much.|ขอบคุณมาก|แธงก์ ยู เวรี่ มัช
+s|You're welcome.|ด้วยความยินดี|ยัวร์ เวลคัม
+s|Excuse me.|ขอโทษนะ (เรียกความสนใจ/ขอทาง)|เอ็กซ์คิวส์ มี
+s|I'm sorry.|ขอโทษ|แอม ซอรี่
+s|No problem.|ไม่เป็นไร|โน พรอบเบลม
+s|Please.|รบกวน / ได้โปรด|พลีส
+s|Yes, please. / No, thank you.|เอาครับ/ค่ะ / ไม่เอา ขอบคุณ|เยส พลีส / โน แธงก์ ยู
+s|Nice to meet you.|ยินดีที่ได้รู้จัก|ไนซ์ ทู มีท ยู
+s|See you later. / Goodbye.|แล้วเจอกัน / ลาก่อน|ซี ยู เลเทอร์ / กู๊ดบาย
+s|Have a nice day!|ขอให้มีวันที่ดี|แฮฟ อะ ไนซ์ เดย์
+
+@cat|restaurant|ร้านอาหาร
+s|A table for two, please.|ขอโต๊ะสำหรับสองคน|อะ เทเบิล ฟอร์ ทู พลีส
+s|I have a reservation under the name...|ฉันจองไว้ภายใต้ชื่อ...|ไอ แฮฟ อะ เรเซอร์เวชัน อันเดอร์ เดอะ เนม
+s|Can I see the menu, please?|ขอดูเมนูหน่อยได้ไหม|แคน ไอ ซี เดอะ เมนู พลีส
+s|What do you recommend?|คุณแนะนำอะไรบ้าง|วอท ดู ยู เรคคอมเมนด์
+s|I'd like the chicken, please.|ขอไก่หนึ่งที่|ไอด์ ไลค์ เดอะ ชิคเคน พลีส
+s|I'll have the same, please.|ขอเหมือนกันครับ/ค่ะ|ไอล์ แฮฟ เดอะ เซม พลีส
+s|What's in this dish?|อาหารจานนี้มีอะไรบ้าง|วอทส์ อิน ดิส ดิช
+s|I'm allergic to shellfish.|ฉันแพ้อาหารทะเลเปลือกแข็ง|แอม อัลเลอร์จิก ทู เชลฟิช
+s|I'm vegetarian.|ฉันกินมังสวิรัติ|แอม เวจจะแทเรียน
+s|No pork, please.|ไม่เอาหมูนะ|โน พอร์ก พลีส
+s|Is this spicy?|อันนี้เผ็ดไหม|อิส ดิส สไปซี่
+s|Not too spicy, please.|ไม่เผ็ดมากนะ|นอท ทู สไปซี่ พลีส
+s|Can I have some water, please?|ขอน้ำเปล่าหน่อย|แคน ไอ แฮฟ ซัม วอเทอร์ พลีส
+s|Could we have the bill, please?|ขอเช็กบิลหน่อย|คูด วี แฮฟ เดอะ บิล พลีส
+s|Can I pay by card?|จ่ายด้วยบัตรได้ไหม|แคน ไอ เพย์ บาย คาร์ด
+s|Is service included?|รวมค่าบริการแล้วหรือยัง|อิส เซอร์วิส อินคลูดิด
+s|Can I get this to go?|ขอห่อกลับบ้านได้ไหม|แคน ไอ เก็ท ดิส ทู โก
+s|Medium, please.|ขอสุกปานกลาง|มีเดียม พลีส
+s|It was delicious.|อร่อยมาก|อิท วอส ดิลิเชียส
+h|Do you have a reservation?|คุณจองไว้ไหม|ดู ยู แฮฟ อะ เรเซอร์เวชัน
+h|Are you ready to order?|พร้อมสั่งหรือยัง|อาร์ ยู เรดี้ ทู ออร์เดอร์
+h|Anything to drink?|รับเครื่องดื่มไหม|เอนี่ธิง ทู ดริงค์
+h|For here or to go?|ทานที่นี่หรือห่อกลับ|ฟอร์ เฮียร์ ออร์ ทู โก
+h|How would you like your steak?|สเต๊กสุกระดับไหน|ฮาว วูด ยู ไลค์ ยัวร์ สเต็ก
+h|Would you like anything else?|รับอะไรเพิ่มไหม|วูด ยู ไลค์ เอนี่ธิง เอลส์
+
+@cat|directions|ถามทาง
+s|Excuse me, where is the nearest station?|ขอโทษนะ สถานีที่ใกล้ที่สุดอยู่ที่ไหน|เอ็กซ์คิวส์ มี แวร์ อิส เดอะ เนียร์เรสท์ สเตชัน
+s|How do I get to this address?|ไปที่อยู่นี้ยังไง|ฮาว ดู ไอ เก็ท ทู ดิส แอดเดรส
+s|Is it far from here?|ไกลจากที่นี่ไหม|อิส อิท ฟาร์ ฟรอม เฮียร์
+s|Can I walk there?|เดินไปได้ไหม|แคน ไอ วอล์ค แดร์
+s|How long does it take?|ใช้เวลานานแค่ไหน|ฮาว ลอง ดาส อิท เทค
+s|Can you show me on the map?|ช่วยชี้บนแผนที่ได้ไหม|แคน ยู โชว์ มี ออน เดอะ แมป
+s|Am I going the right way?|ฉันมาถูกทางไหม|แอม ไอ โกอิ้ง เดอะ ไรท์ เวย์
+s|I'm lost.|ฉันหลงทาง|แอม ลอสต์
+s|Where is the restroom?|ห้องน้ำอยู่ที่ไหน|แวร์ อิส เดอะ เรสท์รูม
+h|Go straight.|เดินตรงไป|โก สเตรท
+h|Turn left. / Turn right.|เลี้ยวซ้าย / เลี้ยวขวา|เทิร์น เลฟท์ / เทิร์น ไรท์
+h|It's on your left.|อยู่ทางซ้ายมือ|อิทส์ ออน ยัวร์ เลฟท์
+h|It's next to the bank.|อยู่ข้างธนาคาร|อิทส์ เน็กซ์ท ทู เดอะ แบงค์
+h|It's across the street.|อยู่ฝั่งตรงข้ามถนน|อิทส์ อะครอส เดอะ สตรีท
+h|It's about five minutes on foot.|เดินประมาณห้านาที|อิทส์ อะเบาท์ ไฟฟ์ มินิทส์ ออน ฟุต
+h|Keep going until the traffic light.|เดินไปเรื่อยๆ จนถึงไฟแดง|คีพ โกอิ้ง อันทิล เดอะ แทรฟฟิก ไลท์
+h|You can't miss it.|ไม่มีทางพลาดหรอก|ยู แคนท์ มิส อิท
+
+@cat|transport|เดินทาง แท็กซี่ รถไฟ
+s|Where can I buy a ticket?|ซื้อตั๋วได้ที่ไหน|แวร์ แคน ไอ บาย อะ ทิคเก็ท
+s|One ticket to the city center, please.|ขอตั๋วไปใจกลางเมืองหนึ่งใบ|วัน ทิคเก็ท ทู เดอะ ซิตี้ เซ็นเตอร์ พลีส
+s|Does this bus go to the airport?|รถบัสคันนี้ไปสนามบินไหม|ดาส ดิส บัส โก ทู ดิ แอร์พอร์ท
+s|Which platform is it for the train to Boston?|รถไฟไปบอสตันขึ้นชานชาลาไหน|วิช แพลตฟอร์ม อิส อิท ฟอร์ เดอะ เทรน ทู บอสตัน
+s|What time is the next train?|รถไฟขบวนถัดไปกี่โมง|วอท ไทม์ อิส เดอะ เน็กซ์ท เทรน
+s|Is this seat taken?|ที่นั่งนี้มีคนจองไหม|อิส ดิส ซีท เทเคน
+s|Could you tell me when to get off?|ช่วยบอกตอนต้องลงได้ไหม|คูด ยู เทล มี เวน ทู เก็ท ออฟ
+s|Please take me to this address.|ช่วยพาไปที่อยู่นี้|พลีส เทค มี ทู ดิส แอดเดรส
+s|Could you turn on the meter, please?|ช่วยกดมิเตอร์ด้วย|คูด ยู เทิร์น ออน เดอะ มิเตอร์ พลีส
+s|How much to the airport?|ไปสนามบินเท่าไหร่|ฮาว มัช ทู ดิ แอร์พอร์ท
+s|Please stop here.|จอดตรงนี้|พลีส สต็อป เฮียร์
+s|Keep the change.|ไม่ต้องทอน|คีพ เดอะ เชนจ์
+s|I missed my train.|ฉันตกรถไฟ|ไอ มิสท์ มาย เทรน
+s|Where can I rent a bike?|เช่าจักรยานได้ที่ไหน|แวร์ แคน ไอ เรนท์ อะ ไบค์
+h|Where to?|ไปไหนครับ/คะ|แวร์ ทู
+h|This train is delayed.|รถไฟขบวนนี้ล่าช้า|ดิส เทรน อิส ดีเลย์ด
+h|Next stop...|ป้ายหน้า...|เน็กซ์ท สต็อป
+h|Please mind the gap.|ระวังช่องว่างระหว่างรถกับชานชาลา|พลีส ไมนด์ เดอะ แกพ
+
+@cat|hotel|โรงแรมและที่พัก
+s|I have a reservation.|ฉันจองไว้แล้ว|ไอ แฮฟ อะ เรเซอร์เวชัน
+s|I'd like to check in, please.|ขอเช็กอิน|ไอด์ ไลค์ ทู เช็ค อิน พลีส
+s|I'd like to check out, please.|ขอเช็กเอาต์|ไอด์ ไลค์ ทู เช็ค เอาท์ พลีส
+s|Do you have any rooms available?|มีห้องว่างไหม|ดู ยู แฮฟ เอนี่ รูมส์ อะเวลเลเบิล
+s|How much is it per night?|คืนละเท่าไหร่|ฮาว มัช อิส อิท เพอร์ ไนท์
+s|Is breakfast included?|รวมอาหารเช้าไหม|อิส เบรคฟาสท์ อินคลูดิด
+s|What time is check-out?|เช็กเอาต์กี่โมง|วอท ไทม์ อิส เช็ค เอาท์
+s|Can I leave my luggage here?|ฝากกระเป๋าไว้ที่นี่ได้ไหม|แคน ไอ ลีฟ มาย ลักเกจ เฮียร์
+s|What's the Wi-Fi password?|รหัสไวไฟคืออะไร|วอทส์ เดอะ ไวไฟ พาสเวิร์ด
+s|The air conditioner isn't working.|แอร์ไม่ทำงาน|ดิ แอร์ คอนดิชันเนอร์ อิสซันท์ เวิร์คกิ้ง
+s|There's no hot water.|น้ำไม่ร้อน|แดร์ส โน ฮอท วอเทอร์
+s|Could I have extra towels, please?|ขอผ้าเช็ดตัวเพิ่ม|คูด ไอ แฮฟ เอ็กซ์ตร้า ทาวเวิลส์ พลีส
+s|Could you call a taxi for me?|ช่วยเรียกแท็กซี่ให้หน่อย|คูด ยู คอล อะ แท็กซี่ ฟอร์ มี
+s|I'm locked out of my room.|ฉันเข้าห้องไม่ได้ (ล็อกอยู่ข้างนอก)|แอม ล็อกท์ เอาท์ ออฟ มาย รูม
+s|Could I get a wake-up call at seven?|ขอโทรปลุกตอนเจ็ดโมง|คูด ไอ เก็ท อะ เวค อัพ คอล แอท เซเว่น
+h|May I see your passport?|ขอดูพาสปอร์ตหน่อย|เมย์ ไอ ซี ยัวร์ พาสปอร์ต
+h|Here is your key card.|นี่คือคีย์การ์ดของคุณ|เฮียร์ อิส ยัวร์ คี การ์ด
+h|Breakfast is served from seven to ten.|อาหารเช้าเสิร์ฟเจ็ดถึงสิบโมง|เบรคฟาสท์ อิส เสิร์ฟด ฟรอม เซเว่น ทู เทน
+
+@cat|airport|สนามบินและตรวจคนเข้าเมือง
+s|Where is the check-in counter?|เคาน์เตอร์เช็กอินอยู่ที่ไหน|แวร์ อิส เดอะ เช็ค อิน เคานเตอร์
+s|I'd like a window seat, please.|ขอที่นั่งริมหน้าต่าง|ไอด์ ไลค์ อะ วินโดว์ ซีท พลีส
+s|I'd like an aisle seat, please.|ขอที่นั่งริมทางเดิน|ไอด์ ไลค์ แอน ไอล์ ซีท พลีส
+s|Is this flight on time?|เที่ยวบินนี้ตรงเวลาไหม|อิส ดิส ไฟลท์ ออน ไทม์
+s|Which gate is it?|ประตูขึ้นเครื่องหมายเลขอะไร|วิช เกท อิส อิท
+s|Where is baggage claim?|ที่รับกระเป๋าอยู่ที่ไหน|แวร์ อิส แบ็กเกจ เคลม
+s|My luggage is missing.|กระเป๋าฉันหาย|มาย ลักเกจ อิส มิสซิ่ง
+s|I'm here for tourism.|ฉันมาท่องเที่ยว|แอม เฮียร์ ฟอร์ ทัวริซึม
+s|I'm staying for five days.|ฉันพักห้าวัน|แอม สเตย์อิ้ง ฟอร์ ไฟฟ์ เดย์ส
+s|I'm staying at the Grand Hotel.|ฉันพักที่โรงแรมแกรนด์|แอม สเตย์อิ้ง แอท เดอะ แกรนด์ โฮเทล
+s|Where can I buy a SIM card?|ซื้อซิมการ์ดได้ที่ไหน|แวร์ แคน ไอ บาย อะ ซิม การ์ด
+h|What's the purpose of your visit?|มาด้วยวัตถุประสงค์อะไร|วอทส์ เดอะ เพอร์พัส ออฟ ยัวร์ วิซิท
+h|How long will you stay?|จะพักนานแค่ไหน|ฮาว ลอง วิล ยู สเตย์
+h|Do you have anything to declare?|มีของต้องสำแดงไหม|ดู ยู แฮฟ เอนี่ธิง ทู ดิเคลร์
+h|Please put your bag on the belt.|วางกระเป๋าบนสายพาน|พลีส พุท ยัวร์ แบ็ก ออน เดอะ เบลท์
+h|Boarding will begin shortly.|จะเริ่มขึ้นเครื่องในไม่ช้า|บอร์ดดิ้ง วิล บีกิน ชอร์ทลี่
+
+@cat|shopping|ช้อปปิ้ง
+s|How much is this?|อันนี้เท่าไหร่|ฮาว มัช อิส ดิส
+s|Do you have this in a larger size?|มีไซซ์ใหญ่กว่านี้ไหม|ดู ยู แฮฟ ดิส อิน อะ ลาร์จเจอร์ ไซซ์
+s|Do you have this in a smaller size?|มีไซซ์เล็กกว่านี้ไหม|ดู ยู แฮฟ ดิส อิน อะ สมอลเลอร์ ไซซ์
+s|Can I try this on?|ลองใส่ได้ไหม|แคน ไอ ทราย ดิส ออน
+s|Where is the fitting room?|ห้องลองเสื้ออยู่ที่ไหน|แวร์ อิส เดอะ ฟิตติ้ง รูม
+s|Do you have this in another color?|มีสีอื่นไหม|ดู ยู แฮฟ ดิส อิน อะนาเธอร์ คัลเลอร์
+s|It's a bit expensive. Can you give me a discount?|ค่อนข้างแพง ลดได้ไหม|อิทส์ อะ บิท เอ็กซ์เพนซีฟ แคน ยู กีฟ มี อะ ดิสเคานท์
+s|I'll take it.|เอาอันนี้|ไอล์ เทค อิท
+s|I'm just looking, thank you.|ดูเฉยๆ ขอบคุณ|แอม จัสท์ ลุคกิ้ง แธงก์ ยู
+s|Can I get a receipt, please?|ขอใบเสร็จด้วย|แคน ไอ เก็ท อะ รีซีท พลีส
+s|Can I exchange this?|ขอเปลี่ยนสินค้านี้ได้ไหม|แคน ไอ เอ็กซ์เชนจ์ ดิส
+s|Can I get a refund?|ขอคืนเงินได้ไหม|แคน ไอ เก็ท อะ รีฟันด์
+s|Is there a tax refund?|มีการคืนภาษีไหม|อิส แดร์ อะ แท็กซ์ รีฟันด์
+s|Do you accept credit cards?|รับบัตรเครดิตไหม|ดู ยู แอคเซ็พท์ เครดิต การ์ดส์
+s|Could you gift wrap it?|ช่วยห่อเป็นของขวัญได้ไหม|คูด ยู กิฟท์ แร็พ อิท
+h|Can I help you?|ให้ช่วยอะไรไหม|แคน ไอ เฮลป์ ยู
+h|Do you need a bag?|ต้องการถุงไหม|ดู ยู นีด อะ แบ็ก
+h|That will be twenty-five dollars.|ทั้งหมดยี่สิบห้าดอลลาร์|แดท วิล บี ทเวนตี้ ไฟฟ์ ดอลลาร์ส
+h|We're about to close.|เรากำลังจะปิดแล้ว|เวียร์ อะเบาท์ ทู โคลส
+
+@cat|money|เงินและการจ่ายเงิน
+s|Where can I exchange money?|แลกเงินได้ที่ไหน|แวร์ แคน ไอ เอ็กซ์เชนจ์ มันนี่
+s|What's the exchange rate today?|วันนี้อัตราแลกเปลี่ยนเท่าไหร่|วอทส์ ดิ เอ็กซ์เชนจ์ เรท ทูเดย์
+s|Is there an ATM nearby?|แถวนี้มีตู้ ATM ไหม|อิส แดร์ แอน เอทีเอ็ม เนียร์บาย
+s|Can I pay in cash?|จ่ายเงินสดได้ไหม|แคน ไอ เพย์ อิน แคช
+s|Could we split the bill?|ขอแยกจ่ายได้ไหม|คูด วี สปลิท เดอะ บิล
+s|Do you have change for a twenty?|มีเงินทอนแบงก์ยี่สิบไหม|ดู ยู แฮฟ เชนจ์ ฟอร์ อะ ทเวนตี้
+s|I think there's a mistake on the bill.|ฉันคิดว่าบิลผิดนะ|ไอ ธิงค์ แดร์ส อะ มิสเทค ออน เดอะ บิล
+h|Cash or card?|เงินสดหรือบัตร|แคช ออร์ การ์ด
+h|Please enter your PIN.|กรุณากรอกรหัส PIN|พลีส เอ็นเทอร์ ยัวร์ พิน
+h|Sorry, we only accept cash.|ขอโทษ เรารับเฉพาะเงินสด|ซอรี่ วี โอนลี่ แอคเซ็พท์ แคช
+h|Would you like a receipt?|ต้องการใบเสร็จไหม|วูด ยู ไลค์ อะ รีซีท
+
+@cat|emergency|ฉุกเฉินและสุขภาพ
+s|Help!|ช่วยด้วย|เฮลป์
+s|Call an ambulance!|เรียกรถพยาบาลด้วย|คอล แอน แอมบิวแลนซ์
+s|Call the police!|เรียกตำรวจด้วย|คอล เดอะ โพลีส
+s|I need a doctor.|ฉันต้องการหมอ|ไอ นีด อะ ด็อกเตอร์
+s|I don't feel well.|ฉันรู้สึกไม่สบาย|ไอ โดนท์ ฟีล เวล
+s|I have a headache.|ฉันปวดหัว|ไอ แฮฟ อะ เฮดเอค
+s|I have a stomachache.|ฉันปวดท้อง|ไอ แฮฟ อะ สตัมมักเอค
+s|I have a fever.|ฉันมีไข้|ไอ แฮฟ อะ ฟีเวอร์
+s|I'm allergic to this medicine.|ฉันแพ้ยานี้|แอม อัลเลอร์จิก ทู ดิส เมดดิซิน
+s|Where is the nearest pharmacy?|ร้านขายยาที่ใกล้ที่สุดอยู่ที่ไหน|แวร์ อิส เดอะ เนียร์เรสท์ ฟาร์มาซี
+s|Where is the nearest hospital?|โรงพยาบาลที่ใกล้ที่สุดอยู่ที่ไหน|แวร์ อิส เดอะ เนียร์เรสท์ ฮอสพิทัล
+s|I lost my passport.|ฉันทำพาสปอร์ตหาย|ไอ ลอสท์ มาย พาสปอร์ต
+s|My wallet was stolen.|กระเป๋าสตางค์ถูกขโมย|มาย วอลเล็ท วอส สโตเลน
+s|I need to report a theft.|ฉันต้องการแจ้งความของหาย/ถูกขโมย|ไอ นีด ทู รีพอร์ท อะ เธฟท์
+s|Please contact the Thai embassy.|ช่วยติดต่อสถานทูตไทยด้วย|พลีส คอนแทคท์ เดอะ ไท เอ็มบาสซี่
+s|There's been an accident.|เกิดอุบัติเหตุ|แดร์ส บีน แอน แอคซิเดนท์
+s|Is there anyone who speaks Thai?|มีใครพูดไทยได้ไหม|อิส แดร์ เอนี่วัน ฮู สปีกส์ ไท
+h|Where does it hurt?|เจ็บตรงไหน|แวร์ ดาส อิท เฮิร์ท
+h|Take this twice a day after meals.|ทานวันละสองครั้งหลังอาหาร|เทค ดิส ทไวซ์ อะ เดย์ แอฟเตอร์ มีลส์
+h|Please fill out this form.|กรุณากรอกแบบฟอร์มนี้|พลีส ฟิล เอาท์ ดิส ฟอร์ม
+h|Can you tell me what happened?|เล่าได้ไหมว่าเกิดอะไรขึ้น|แคน ยู เทล มี วอท แฮพเพนด์
+
+@cat|smalltalk|คุยทำความรู้จัก
+s|What's your name? My name is Max.|คุณชื่ออะไร ฉันชื่อแม็กซ์|วอทส์ ยัวร์ เนม มาย เนม อิส แม็กซ์
+s|Where are you from?|คุณมาจากไหน|แวร์ อาร์ ยู ฟรอม
+s|I'm from Thailand.|ฉันมาจากประเทศไทย|แอม ฟรอม ไทแลนด์
+s|Is this your first time here?|นี่เป็นครั้งแรกที่คุณมาที่นี่ไหม|อิส ดิส ยัวร์ เฟิร์สท ไทม์ เฮียร์
+s|I'm traveling with friends.|ฉันเที่ยวกับเพื่อน|แอม ทราเวลลิ่ง วิธ เฟรนด์ส
+s|What do you recommend I see here?|คุณแนะนำให้ไปดูอะไรที่นี่|วอท ดู ยู เรคคอมเมนด์ ไอ ซี เฮียร์
+s|Your English is very good.|ภาษาอังกฤษคุณเก่งมาก|ยัวร์ อิงลิช อิส เวรี่ กู๊ด
+s|Do you mind if I sit here?|ขอนั่งตรงนี้ได้ไหม|ดู ยู ไมนด์ อิฟ ไอ ซิท เฮียร์
+s|It's really hot today.|วันนี้ร้อนมาก|อิทส์ เรียลลี่ ฮอท ทูเดย์
+s|It was nice talking to you.|ดีใจที่ได้คุยกับคุณ|อิท วอส ไนซ์ ทอล์คกิ้ง ทู ยู
+s|Let's keep in touch.|ติดต่อกันนะ|เล็ทส์ คีพ อิน ทัช
+h|Where are you from?|คุณมาจากไหน|แวร์ อาร์ ยู ฟรอม
+h|How long have you been here?|อยู่ที่นี่มานานแค่ไหนแล้ว|ฮาว ลอง แฮฟ ยู บีน เฮียร์
+h|Are you enjoying your trip?|เที่ยวสนุกไหม|อาร์ ยู เอ็นจอยอิ้ง ยัวร์ ทริพ
+h|What brings you here?|อะไรพาคุณมาที่นี่|วอท บริงส์ ยู เฮียร์
+
+@cat|daily|ชีวิตประจำวัน คาเฟ่
+s|Can I have a latte, please?|ขอลาเต้หนึ่งแก้ว|แคน ไอ แฮฟ อะ ลาเต้ พลีส
+s|Can I get it with less sugar?|ขอหวานน้อย|แคน ไอ เก็ท อิท วิธ เลส ชูการ์
+s|No ice, please.|ไม่ใส่น้ำแข็ง|โน ไอซ์ พลีส
+s|Can I charge my phone here?|ชาร์จโทรศัพท์ที่นี่ได้ไหม|แคน ไอ ชาร์จ มาย โฟน เฮียร์
+s|Do you have Wi-Fi here?|ที่นี่มีไวไฟไหม|ดู ยู แฮฟ ไวไฟ เฮียร์
+s|What time do you open?|เปิดกี่โมง|วอท ไทม์ ดู ยู โอเพน
+s|What time do you close?|ปิดกี่โมง|วอท ไทม์ ดู ยู โคลส
+s|I'll be right back.|เดี๋ยวกลับมา|ไอล์ บี ไรท์ แบ็ค
+s|I'm on my way.|กำลังไปแล้ว|แอม ออน มาย เวย์
+s|I'm running late.|ฉันกำลังจะไปสาย|แอม รันนิ่ง เลท
+s|Let's meet at six.|เจอกันหกโมง|เล็ทส์ มีท แอท ซิกซ์
+s|Do you have any plans this weekend?|สุดสัปดาห์นี้มีแผนอะไรไหม|ดู ยู แฮฟ เอนี่ แพลนส์ ดิส วีคเอนด์
+s|Can you do me a favor?|ช่วยหน่อยได้ไหม|แคน ยู ดู มี อะ เฟเวอร์
+s|Could you pass me the salt?|ช่วยส่งเกลือให้หน่อย|คูด ยู พาส มี เดอะ ซอลท์
+s|I'm full.|ฉันอิ่มแล้ว|แอม ฟูล
+s|I'm tired.|ฉันเหนื่อย|แอม ไทเออร์ด
+s|Cheers!|ชนแก้ว|เชียร์ส
+h|Medium or large?|ไซซ์กลางหรือใหญ่|มีเดียม ออร์ ลาร์จ
+h|What's your name for the order?|ขอชื่อสำหรับออเดอร์|วอทส์ ยัวร์ เนม ฟอร์ ดิ ออร์เดอร์
+
+@cat|understand|ไม่เข้าใจ ขอให้ช่วย
+s|Sorry, I don't understand.|ขอโทษ ฉันไม่เข้าใจ|ซอรี่ ไอ โดนท์ อันเดอร์สแตนด์
+s|Could you repeat that, please?|ช่วยพูดอีกครั้งได้ไหม|คูด ยู รีพีท แดท พลีส
+s|Could you speak more slowly, please?|ช่วยพูดช้าลงหน่อยได้ไหม|คูด ยู สปีค มอร์ สโลว์ลี่ พลีส
+s|I only speak a little English.|ฉันพูดอังกฤษได้นิดหน่อย|ไอ โอนลี่ สปีค อะ ลิตเติ้ล อิงลิช
+s|How do you say this in English?|อันนี้พูดเป็นอังกฤษว่ายังไง|ฮาว ดู ยู เซย์ ดิส อิน อิงลิช
+s|What does this mean?|อันนี้แปลว่าอะไร|วอท ดาส ดิส มีน
+s|Could you write it down?|ช่วยเขียนให้หน่อยได้ไหม|คูด ยู ไรท์ อิท ดาวน์
+s|Can you show me?|ช่วยทำให้ดูหน่อยได้ไหม|แคน ยู โชว์ มี
+s|Just a moment, please.|รอสักครู่|จัสท์ อะ โมเมนท์ พลีส
+s|Can you help me, please?|ช่วยฉันหน่อยได้ไหม|แคน ยู เฮลป์ มี พลีส
+s|I'm not sure.|ฉันไม่แน่ใจ|แอม นอท ชัวร์
+s|Never mind.|ช่างเถอะ|เนเวอร์ ไมนด์
+s|That's all, thank you.|แค่นี้ ขอบคุณ|แดทส์ ออล แธงก์ ยู
+h|Pardon?|ว่าอะไรนะ|พาร์เดิน
+h|Do you speak English?|คุณพูดอังกฤษได้ไหม|ดู ยู สปีค อิงลิช
+
+@cat|sightseeing|ท่องเที่ยว
+s|How much is the entrance fee?|ค่าเข้าเท่าไหร่|ฮาว มัช อิส ดิ เอ็นทรานซ์ ฟี
+s|What time does the museum open?|พิพิธภัณฑ์เปิดกี่โมง|วอท ไทม์ ดาส เดอะ มิวเซียม โอเพน
+s|Is there a student discount?|มีส่วนลดนักเรียนไหม|อิส แดร์ อะ สติวเดนท์ ดิสเคานท์
+s|Is photography allowed?|ถ่ายรูปได้ไหม|อิส โฟโทกราฟี อัลลาวด์
+s|Could you take a photo of us, please?|ช่วยถ่ายรูปให้หน่อยได้ไหม|คูด ยู เทค อะ โฟโต้ ออฟ อัส พลีส
+s|Could you take one more?|ขออีกรูปได้ไหม|คูด ยู เทค วัน มอร์
+s|Is there a guided tour in English?|มีทัวร์ภาษาอังกฤษไหม|อิส แดร์ อะ ไกด์ด ทัวร์ อิน อิงลิช
+s|What's the best time to visit?|ไปช่วงไหนดีที่สุด|วอทส์ เดอะ เบสท์ ไทม์ ทู วิซิท
+s|Is it worth visiting?|คุ้มที่จะไปไหม|อิส อิท เวิร์ธ วิซิททิ้ง
+s|Where is the tourist information center?|ศูนย์ข้อมูลนักท่องเที่ยวอยู่ที่ไหน|แวร์ อิส เดอะ ทัวริสท์ อินฟอร์เมชัน เซ็นเตอร์
+s|Do you have a map in English?|มีแผนที่ภาษาอังกฤษไหม|ดู ยู แฮฟ อะ แมป อิน อิงลิช
+s|This place is beautiful.|ที่นี่สวยมาก|ดิส เพลส อิส บิวทิฟูล
+
+@cat|reactions|ตอบรับ ปฏิเสธ รู้สึกยังไง
+s|Sure! / Of course!|ได้เลย / แน่นอน|ชัวร์ / ออฟ คอร์ส
+s|I agree.|ฉันเห็นด้วย|ไอ อะกรี
+s|I don't think so.|ฉันไม่คิดอย่างนั้น|ไอ โดนท์ ธิงค์ โซ
+s|Maybe.|บางที|เมย์บี
+s|Really?|จริงเหรอ|เรียลลี่
+s|That's great!|เยี่ยมเลย|แดทส์ เกรท
+s|That's a pity.|น่าเสียดายจัง|แดทส์ อะ พิตตี้
+s|No worries.|ไม่ต้องกังวล|โน เวอร์รี่ส์
+s|I'm afraid I can't.|เกรงว่าฉันทำไม่ได้|แอม อะเฟรด ไอ แคนท์
+s|Sounds good to me.|ฟังดีนะ|ซาวด์ส กู๊ด ทู มี
+s|I'd love to.|ยินดีเลย|ไอด์ เลิฟ ทู
+s|Not really.|ไม่เชิงหรอก|นอท เรียลลี่
