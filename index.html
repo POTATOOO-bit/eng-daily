@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Say It Abroad</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: sticky filter header over a list of phrase cards grouped by situation; two overlays (show-to-someone, practice) */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --ink:#111b2e; --mut:#5b6980; --line:#dce2eb;
+  --say:#0a6c8f; --say-soft:#e0f0f6; --hear:#a1500b; --hear-soft:#fbe9d8; --star:#d08400;
+  --font:"IBM Plex Sans Thai",-apple-system,"Thonburi",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b111e; --surface:#141c2f; --ink:#e8edf7; --mut:#92a0b9; --line:#25304a;
+  --say:#5cc3e6; --say-soft:#112e3b; --hear:#f1a766; --hear-soft:#39261a; --star:#f5b73b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b111e; --surface:#141c2f; --ink:#e8edf7; --mut:#92a0b9; --line:#25304a;
+  --say:#5cc3e6; --say-soft:#112e3b; --hear:#f1a766; --hear-soft:#39261a; --star:#f5b73b; color-scheme:dark}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1040px;margin:0 auto}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);padding:12px 0 10px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.r1{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h1{margin:0;font-size:21px;font-weight:700;letter-spacing:-.01em}
+.count{color:var(--mut);font-size:13px;flex:1;min-width:0}
+.btn{height:38px;padding:0 16px;border-radius:19px;border:1px solid var(--line);background:var(--surface);font-weight:600;font-size:14px}
+.btn.main{background:var(--say);border-color:var(--say);color:#fff}
+:root[data-theme="dark"] .btn.main{color:#06222d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.main{color:#06222d}}
+.r2{display:flex;gap:8px;flex-wrap:wrap}
+.search{flex:1 1 220px;min-width:0;height:40px;border-radius:20px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:0 16px;font:inherit;font-size:16px;outline:none}
+.search:focus{border-color:var(--say)}
+.seg{display:flex;border:1px solid var(--line);border-radius:20px;background:var(--surface);overflow:hidden;flex:none}
+.seg button{border:0;background:none;padding:0 14px;height:38px;font-size:14px;color:var(--mut)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);font-weight:600}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;height:32px;padding:0 13px;border-radius:16px;border:1px solid var(--line);background:var(--surface);font-size:14px;color:var(--ink);white-space:nowrap}
+.chip small{color:var(--mut);margin-left:5px;font-size:12px}
+.chip[aria-pressed="true"]{background:var(--say);border-color:var(--say);color:#fff}
+.chip[aria-pressed="true"] small{color:inherit;opacity:.8}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#06222d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#06222d}}
+main{padding:6px 0 calc(48px + env(safe-area-inset-bottom,0px))}
+h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:24px 0 10px;font-weight:600;display:flex;gap:8px;align-items:baseline}
+h2 em{font-style:normal;text-transform:none;letter-spacing:0;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:13px 10px 4px 16px;display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.en{font-size:18px;font-weight:600;line-height:1.35;text-wrap:balance;overflow-wrap:anywhere}
+.th{font-size:15px;overflow-wrap:anywhere}
+.rd{font-size:13px;color:var(--mut);overflow-wrap:anywhere}
+.note{margin-top:7px;font-size:13px;line-height:1.45;background:var(--say-soft);color:var(--ink);border-radius:9px;padding:6px 10px;overflow-wrap:anywhere}
+.fc .note{text-align:left;max-width:100%}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:1px 8px;border-radius:9px;background:var(--hear-soft);color:var(--hear);margin-bottom:3px}
+.card .t{min-width:0}
+.acts{display:flex;gap:0;justify-content:flex-end;margin-top:2px}
+.ib{width:44px;height:40px;border:0;background:none;border-radius:21px;color:var(--mut);display:grid;place-items:center}
+.ib:hover,.ib:focus-visible{background:var(--say-soft);color:var(--say)}
+.ib svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ib.on{color:var(--star)}
+.ib.on svg{fill:currentColor}
+.empty{padding:48px 8px;text-align:center;color:var(--mut)}
+.ov{position:fixed;inset:0;z-index:40;background:var(--bg);display:flex;flex-direction:column;
+  padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.ov-top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--mut);font-size:14px}
+.ov-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:12px 4px;min-height:0;overflow:auto}
+.big{font-size:clamp(30px,7.2vw,68px);font-weight:700;line-height:1.2;text-wrap:balance;overflow-wrap:anywhere;max-width:16ch}
+.big.wide{max-width:22ch}
+.sub{font-size:clamp(17px,3vw,24px);color:var(--mut);overflow-wrap:anywhere}
+.ov-bot{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.ov-bot .btn{min-width:96px;height:46px}
+.fc{width:min(100%,640px);min-height:min(50vh,360px);border:1px solid var(--line);border-radius:22px;background:var(--surface);padding:26px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;text-align:center}
+.fc .hint{font-size:13px;color:var(--mut)}
+.fc .en2{font-size:clamp(24px,5.5vw,38px);font-weight:700;line-height:1.25;text-wrap:balance;overflow-wrap:anywhere}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--say)}}
+</style>
+
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="r1">
+      <h1>Say It Abroad</h1>
+      <span class="count" id="count"></span>
+      <button class="btn main" id="practice" type="button">ฝึกจำ</button>
+    </div>
+    <div class="r2">
+      <input class="search" id="q" type="search" placeholder="ค้นหา เช่น taxi, ห้องน้ำ, เช็กบิล" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="ค้นหาประโยค">
+      <div class="seg" role="group" aria-label="ชนิดประโยค">
+        <button type="button" data-kind="all" aria-pressed="true">ทั้งหมด</button>
+        <button type="button" data-kind="s" aria-pressed="false">ที่เราพูด</button>
+        <button type="button" data-kind="h" aria-pressed="false">ที่จะได้ยิน</button>
+      </div>
+    </div>
+    <div class="chips" id="chips"></div>
+  </header>
+  <main id="list"></main>
+</div>
+
+<div class="ov" id="showOv" hidden>
+  <div class="ov-top"><span>โชว์ให้อีกฝ่ายอ่าน</span><button class="btn" type="button" id="showClose">ปิด</button></div>
+  <div class="ov-mid"><div class="big" id="showEn"></div><div class="sub" id="showTh"></div></div>
+  <div class="ov-bot"><button class="btn main" type="button" id="showSpeak">ฟังเสียง</button></div>
+</div>
+
+<div class="ov" id="prOv" hidden>
+  <div class="ov-top"><span id="prPos"></span><button class="btn" type="button" id="prClose">ปิด</button></div>
+  <div class="ov-mid">
+    <button class="fc" type="button" id="fc" aria-live="polite"></button>
+  </div>
+  <div class="ov-bot">
+    <button class="btn" type="button" id="prPrev">ก่อนหน้า</button>
+    <button class="btn" type="button" id="prShuf">สลับลำดับ</button>
+    <button class="btn" type="button" id="prSpeak">ฟังเสียง</button>
+    <button class="btn main" type="button" id="prNext">ถัดไป</button>
+  </div>
+</div>
+
+<!--EMBED-->
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ICON={
+  speak:'<svg viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></svg>',
+  star:'<svg viewBox="0 0 24 24"><path d="M12 3.6l2.6 5.5 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6L3.4 9.9l6-.8z"/></svg>',
+  show:'<svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>'
+};
+
+//<parse>
+function parseInto(text,store){
+  let cur=null;
+  for(const raw of text.split(/\r?\n/)){
+    const line=raw.trim();
+    if(!line||line.startsWith("#"))continue;
+    const p=line.split("|");
+    if(p[0]==="@cat"){
+      cur=(p[1]||"").trim();
+      if(cur&&!store.cats.some(c=>c.id===cur))store.cats.push({id:cur,th:(p[2]||cur).trim()});
+      continue;
+    }
+    if(!cur||p.length<3)continue;
+    const kind=p[0].trim()==="h"?"h":"s";
+    const en=p[1].trim(),th=p[2].trim(),rd=(p[3]||"").trim(),note=p.slice(4).join("|").trim();
+    if(!en||store.seen.has(cur+"|"+kind+"|"+en))continue;
+    store.seen.add(cur+"|"+kind+"|"+en);
+    store.phrases.push({cat:cur,kind,en,th,rd,note});
+  }
+}
+//</parse>
+
+const store={cats:[],phrases:[],seen:new Set()};
+const st={cat:"all",kind:"all",q:""};
+let fav=new Set();
+try{fav=new Set(JSON.parse(localStorage.getItem("sia-fav")||"[]"));}catch(e){}
+const saveFav=()=>{try{localStorage.setItem("sia-fav",JSON.stringify([...fav]));}catch(e){}};
+const key=p=>p.kind+"|"+p.en;
+
+async function load(){
+  let files={};
+  if(window.__EMBEDDED__)files=window.__EMBEDDED__;
+  else{
+    try{
+      const base=new URL("data/",location.href);
+      const man=await (await fetch(new URL("manifest.json",base),{cache:"no-cache"})).json();
+      for(const f of man)files[f]=await (await fetch(new URL(f,base),{cache:"no-cache"})).text();
+    }catch(e){
+      $("list").innerHTML='<div class="empty">โหลดไฟล์ข้อมูลไม่ได้<br>ถ้าเปิดไฟล์จากเครื่องโดยตรง ให้ใช้ standalone.html หรือเปิดผ่าน GitHub Pages</div>';
+      return;
+    }
+  }
+  for(const k of Object.keys(files))parseInto(files[k],store);
+  store.phrases.forEach((p,i)=>p.i=i);
+  buildChips();render();
+}
+
+function filtered(){
+  const q=st.q.trim().toLowerCase();
+  return store.phrases.filter(p=>{
+    if(st.cat==="fav"){if(!fav.has(key(p)))return false;}
+    else if(st.cat!=="all"&&p.cat!==st.cat)return false;
+    if(st.kind!=="all"&&p.kind!==st.kind)return false;
+    if(q&&!(p.en.toLowerCase().includes(q)||p.th.toLowerCase().includes(q)||p.rd.toLowerCase().includes(q)||p.note.toLowerCase().includes(q)))return false;
+    return true;
+  });
+}
+
+function buildChips(){
+  const el=$("chips");
+  const items=[{id:"all",th:"ทั้งหมด",n:store.phrases.length},{id:"fav",th:"★ บันทึกไว้",n:fav.size}]
+    .concat(store.cats.map(c=>({id:c.id,th:c.th,n:store.phrases.filter(p=>p.cat===c.id).length})));
+  el.innerHTML=items.map(c=>`<button class="chip" type="button" data-cat="${esc(c.id)}" aria-pressed="${st.cat===c.id}">${esc(c.th)}<small id="n-${esc(c.id)}">${c.n}</small></button>`).join("");
+}
+function refreshChipState(){
+  document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.cat===st.cat)));
+  const f=$("n-fav");if(f)f.textContent=fav.size;
+}
+
+function cardHtml(p){
+  const on=fav.has(key(p));
+  return `<div class="card"><div class="t">${p.kind==="h"?'<span class="tag">ได้ยินบ่อย</span><br>':""}<div class="en" lang="en">${esc(p.en)}</div><div class="th">${esc(p.th)}</div>${p.rd?`<div class="rd">อ่านว่า ${esc(p.rd)}</div>`:""}${p.note?`<div class="note">${esc(p.note)}</div>`:""}</div>
+  <div class="acts">
+    <button class="ib" type="button" data-act="speak" data-i="${p.i}" aria-label="ฟังเสียง">${ICON.speak}</button>
+    <button class="ib${on?" on":""}" type="button" data-act="fav" data-i="${p.i}" aria-label="บันทึก" aria-pressed="${on}">${ICON.star}</button>
+    <button class="ib" type="button" data-act="show" data-i="${p.i}" aria-label="โชว์ให้คนอื่นอ่าน">${ICON.show}</button>
+  </div></div>`;
+}
+
+function render(){
+  const list=filtered();
+  $("count").textContent=list.length+" ประโยค";
+  if(!list.length){
+    $("list").innerHTML=`<div class="empty">${st.cat==="fav"&&!fav.size?"ยังไม่มีประโยคที่บันทึกไว้ กดรูปดาวที่ประโยคเพื่อเก็บไว้":"ไม่พบประโยคที่ตรงกับคำค้น"}</div>`;
+    return;
+  }
+  let h="";
+  for(const c of store.cats){
+    const g=list.filter(p=>p.cat===c.id);
+    if(!g.length)continue;
+    h+=`<h2>${esc(c.th)}<em>${g.length}</em></h2><div class="grid">${g.map(cardHtml).join("")}</div>`;
+  }
+  $("list").innerHTML=h;
+}
+
+/* ---------- speech ---------- */
+function speak(text){
+  try{
+    const s=window.speechSynthesis;if(!s)return;
+    s.cancel();
+    const u=new SpeechSynthesisUtterance(text.replace(/ \/ /g,". "));
+    u.lang="en-US";u.rate=.88;
+    const v=(s.getVoices()||[]).find(v=>/^en[-_](US|GB)/i.test(v.lang));
+    if(v)u.voice=v;
+    s.speak(u);
+  }catch(e){}
+}
+
+/* ---------- overlays ---------- */
+let showP=null;
+function openShow(p){
+  showP=p;$("showEn").textContent=p.en;$("showEn").className="big"+(p.en.length>40?" wide":"");
+  $("showTh").textContent=p.th;$("showOv").hidden=false;document.body.style.overflow="hidden";
+}
+function closeShow(){$("showOv").hidden=true;document.body.style.overflow="";}
+
+let deck=[],di=0,revealed=false;
+function openPractice(){
+  deck=filtered().slice();
+  if(!deck.length)return;
+  di=0;revealed=false;$("prOv").hidden=false;document.body.style.overflow="hidden";drawCard();
+}
+function closePractice(){$("prOv").hidden=true;document.body.style.overflow="";}
+function drawCard(){
+  const p=deck[di];
+  $("prPos").textContent=(di+1)+" / "+deck.length;
+  $("fc").innerHTML=revealed
+    ?`<div class="en2" lang="en">${esc(p.en)}</div><div class="th">${esc(p.th)}</div>${p.rd?`<div class="rd">อ่านว่า ${esc(p.rd)}</div>`:""}${p.note?`<div class="note">${esc(p.note)}</div>`:""}<div class="hint">แตะเพื่อซ่อนคำตอบ</div>`
+    :`<div class="th" style="font-size:clamp(20px,4.6vw,30px);font-weight:600">${esc(p.th)}</div><div class="hint">${p.kind==="h"?"ประโยคที่จะได้ยิน":"ประโยคที่เราพูด"} · ลองนึกเป็นภาษาอังกฤษ แล้วแตะเพื่อดูคำตอบ</div>`;
+}
+function step(d){di=(di+d+deck.length)%deck.length;revealed=false;drawCard();}
+
+/* ---------- events ---------- */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.cat){st.cat=t.dataset.cat;refreshChipState();render();window.scrollTo({top:0});return;}
+  if(t.dataset.kind){st.kind=t.dataset.kind;document.querySelectorAll(".seg button").forEach(b=>b.setAttribute("aria-pressed",String(b===t)));render();return;}
+  if(t.dataset.act){
+    const p=store.phrases[+t.dataset.i];if(!p)return;
+    if(t.dataset.act==="speak")speak(p.en);
+    else if(t.dataset.act==="show")openShow(p);
+    else{fav.has(key(p))?fav.delete(key(p)):fav.add(key(p));saveFav();refreshChipState();if(st.cat==="fav")render();else{t.classList.toggle("on");t.setAttribute("aria-pressed",String(fav.has(key(p))));}}
+    return;
+  }
+  switch(t.id){
+    case"practice":openPractice();break;
+    case"showClose":closeShow();break;
+    case"showSpeak":if(showP)speak(showP.en);break;
+    case"prClose":closePractice();break;
+    case"prNext":step(1);break;
+    case"prPrev":step(-1);break;
+    case"prSpeak":if(deck[di])speak(deck[di].en);break;
+    case"prShuf":
+      for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]];}
+      di=0;revealed=false;drawCard();break;
+    case"fc":revealed=!revealed;drawCard();if(revealed&&deck[di])speak(deck[di].en);break;
+  }
+});
+$("q").addEventListener("input",e=>{st.q=e.target.value;render();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeShow();closePractice();}});
+load();
+</script>
+
+</body>
+</html>
